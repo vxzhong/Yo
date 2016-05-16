@@ -11,7 +11,6 @@
  * @version 1.0.0
  * @param {String} $property 指定属性 {add:1.0.0}
  * @param {String} $value 指定属性值 {add:1.0.0}
- * @private
  * @skip
  */
 @mixin _prefix($property, $value) {
@@ -32,7 +31,6 @@
  * @description 定义字体图标
  * @method _yofont
  * @version 1.0.0
- * @private
  * @skip
  */
 @mixin _yofont() {
@@ -291,7 +289,7 @@
 
     @if map-get($setting, is-vendor-prefix) {
         @each $vendor in map-get($setting, vendor-prefix) {
-            background-image: $vendor$type#{-gradient($dir, $color-stop)};
+            background-image: $vendor$type"#{-gradient($dir, $color-stop)}";
         }
     }
     @each $direction in $dir {
@@ -304,7 +302,7 @@
         }
     }
 
-    background-image: $type#{-gradient($dir-new, $color-stop)};
+    background-image: $type"#{-gradient($dir-new, $color-stop)}";
 }
 
 /**
@@ -401,7 +399,7 @@
         @include responsive(retina3x) {
             width: 300%;
             height: 300%;
-            @include transform(scale(0.333333));
+            @include transform(scale(0.33333));
             @if $radius != null {
                 border-radius: $radius * 3;
             }
@@ -502,9 +500,9 @@
         @each $vendor in map-get($setting, vendor-prefix) {
             @for $i from 1 through length($transition) {
                 @if index($prefix-properties, nth(nth($transition, $i), 1)) {
-                    $vendor-list: join($vendor-list, #{$vendor}#{nth($transition, $i)}, comma);
+                    $vendor-list: join($vendor-list, "#{$vendor}#{nth($transition, $i)}", comma);
                 } @else {
-                    $vendor-list: join($vendor-list, #{nth($transition, $i)}, comma);
+                    $vendor-list: join($vendor-list, "#{nth($transition, $i)}", comma);
                 }
             }
             #{$vendor}transition: $vendor-list;

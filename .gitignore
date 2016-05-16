@@ -6,10 +6,12 @@
 # gulp配置文件
 node_modules
 
-# doc工具
-template
-doctemplate
-docfile.config
+# uedoc
+uedoc/
+
+# doc编译配置
+qdoc.config
+gulp/
 
 # export文件
 usage/export
