@@ -1,6 +1,6 @@
 {
   "name": "yo",
-  "version": "2.1.3",
+  "version": "2.1.2",
   "homepage": "https://github.com/doyoe/Yo",
   "authors": [
     "Joy Du"
@@ -20,7 +20,6 @@
   "ignore": [
     "demo",
     "doc",
-    "gulp",
     "node_modules",
     ".gitignore",
     "case.md",
@@ -34,6 +33,7 @@
     "usage/layout",
     "usage/module",
     "usage/page/*.scss",
-    "usage/widget"
+    "usage/widget",
+    "usage/export"
   ]
 }

@@ -8,13 +8,10 @@ node_modules
 
 # uedoc
 uedoc/
+gulp/uedocConfig.js
 
-# doc编译配置
-qdoc.config
-gulp/
-
-# export文件
-usage/export
+# doc template
+gulp/qdoc_template
 
 # kami相关
 usage/kami
